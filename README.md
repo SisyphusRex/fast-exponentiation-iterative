@@ -13,3 +13,11 @@ Remember, $`x^{a+b}=x^{a}*x^{b}`$.  Also, each coefficient $`a_{j}`$ is 0 or 1.
 For example, take $`7^{11}`$.  The binary expansion of $`11=(1011)_{2}`$.   
 $`7^{11}=7^{(1*2^{3})+(0*2^{2})+(1*2^{1})+(1*2^{0})}=7^{8}*7^{2}*7^{1}`$  
 
+## Pseudocode
+Input: positive integers x and y  
+Output: $`x^{y}`$  
+
+p=1 //partial result  
+s=x //current $`x^{2^{j}}`$  
+r=y // used to compute binary expansion of y
+
