@@ -1,0 +1,9 @@
+# fast-exponentiation-iterative
+Implementation of Fast Exponentiation using Iteration Algorithm.
+
+## What is
+Computing $`x^{y}`$ can take an impractical amount of time.  
+
+We can reduce the time to calculate an exponent by using binary expansion.  
+
+$`x^{y} = x^{a_{k}2^{k} + a_{k-1}2^{k-1}+...+a_{1}2^{1}+a_{0}2^{0}}=x^{a_{k}2^{k}}*x^{a_{k-1}2^{k-1}}*...*x^{a_{1}2^{1}}*x^{a_{0}2^{0}}`$  
