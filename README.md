@@ -31,4 +31,5 @@ r=y // used to compute binary expansion of y
 * return p
 
 NOTE: each iteration produces r mod 2, which is the bit in the binary expansion of y in reverse order.  
+NOTE:  the variable s is squared each iteration: x, x^2, x^4,x^8...  
 
