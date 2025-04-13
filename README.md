@@ -46,7 +46,7 @@ r=y // used to compute binary expansion of y
 
 * while (r>0)
   * if (r mod 2 == 1)
-    * p = p * s$`\mod{n`$
-  * s = s * s$`\mod{n`$
+    * p = p * s$`\mod{n}`$
+  * s = s * s$`\mod{n}`$
   * r = r div 2
 * return p
