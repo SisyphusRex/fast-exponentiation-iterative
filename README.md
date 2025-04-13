@@ -13,6 +13,8 @@ Remember, $`x^{a+b}=x^{a}*x^{b}`$.  Also, each coefficient $`a_{j}`$ is 0 or 1.
 For example, take $`7^{11}`$.  The binary expansion of $`11=(1011)_{2}`$.   
 $`7^{11}=7^{(1*2^{3})+(0*2^{2})+(1*2^{1})+(1*2^{0})}=7^{8}*7^{2}*7^{1}`$  
 
+Fast exponentiation runs in O(log n) (dividing into binary generally indicates logarithm) while brute forcing runs in O(n).  
+
 ## Pseudocode
 Input: positive integers x and y  
 Output: $`x^{y}`$  
