@@ -29,3 +29,6 @@ r=y // used to compute binary expansion of y
   * s = s * s
   * r = r div 2
 * return p
+
+NOTE: each iteration produces r mod 2, which is the bit in the binary expansion of y in reverse order.  
+
