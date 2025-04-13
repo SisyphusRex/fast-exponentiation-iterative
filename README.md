@@ -37,7 +37,7 @@ NOTE: each iteration produces r mod 2, which is the bit in the binary expansion 
 NOTE:  the variable s is squared each iteration: x, x^2, x^4,x^8...  
 
 #### Modular Fast Exponentiation
-Input: positive integers x and y  
+Input: positive integers x and y  and n
 Output: $`x^{y}\mod{n}`$  
 
 p=1 //partial result  
@@ -46,7 +46,7 @@ r=y // used to compute binary expansion of y
 
 * while (r>0)
   * if (r mod 2 == 1)
-    * p = p * s$`\mod{n}`$
-  * s = s * s$`\mod{n}`$
+    * p = (p * s)$`\mod{n}`$
+  * s = (s * s)$`\mod{n}`$
   * r = r div 2
 * return p
