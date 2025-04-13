@@ -1,5 +1,5 @@
 # fast-exponentiation-iterative
-Implementation of Fast Exponentiation using Iteration Algorithm.
+Implementation of Fast Exponentiation and Fast Modular Exponentiation Algorithms using Iteration.
 
 ## What is
 Computing $`x^{y}`$ can take an impractical amount of time.  
@@ -15,7 +15,10 @@ $`7^{11}=7^{(1*2^{3})+(0*2^{2})+(1*2^{1})+(1*2^{0})}=7^{8}*7^{2}*7^{1}`$
 
 Fast exponentiation runs in O(log n) (dividing into binary generally indicates logarithm) while brute forcing runs in O(n).  
 
+With an overly large y, s and p can become to large to store in a computer variable.  Large numbers require computing $`x^{y}\mod{n}`$.  
+
 ## Pseudocode
+#### Normal Fast Exponentiation
 Input: positive integers x and y  
 Output: $`x^{y}`$  
 
@@ -33,3 +36,17 @@ r=y // used to compute binary expansion of y
 NOTE: each iteration produces r mod 2, which is the bit in the binary expansion of y in reverse order.  
 NOTE:  the variable s is squared each iteration: x, x^2, x^4,x^8...  
 
+#### Modular Fast Exponentiation
+Input: positive integers x and y  
+Output: $`x^{y}\mod{n}`$  
+
+p=1 //partial result  
+s=x //current $`x^{2^{j}}`$  
+r=y // used to compute binary expansion of y
+
+* while (r>0)
+  * if (r mod 2 == 1)
+    * p = p * s$`\mod{n`$
+  * s = s * s$`\mod{n`$
+  * r = r div 2
+* return p
