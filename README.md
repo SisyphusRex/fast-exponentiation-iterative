@@ -21,3 +21,9 @@ p=1 //partial result
 s=x //current $`x^{2^{j}}`$  
 r=y // used to compute binary expansion of y
 
+* while (r>0)
+  * if (r mod 2 == 1)
+    * p = p * s
+  * s = s * s
+  * r = r div 2
+* return p
